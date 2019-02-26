@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criptolove</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Pagina1">
+        <div class="Bloque1">
+         <h1>Bienvenidos a "Criptolove"</h1>
+        </div>
+        <p>Ahora será más seguro y divertido demostrar tu amor con la persona que más ames.</p><br><br><br><br><br><br> <br>
+        <form class="myForm" action="index.html" method="post" id="firtsName">
+        <h2>¿Cuál es tu nombre?</h2>
+        <input type="text" class="input1" name="validarNombre" value="" id="txt">
+        </form>
+        <br>
+        <div class="botonReady">
+        <br>
+        <button type="button" class="button1" onclick="validarNombre()" name="button">START</button>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        </div>
+    <div id="Pagina2">
+        <div id="introName"class="title">
+        <br>
+        <h1>Hola <span id="nombreUsuario"></span> es hora de escribir tu mensaje :</h1>
+        </div>
+        <div>
+        <p>Valor de N:  <input id ="offset" type="number" min="1"  value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align"></p>   
+        <div>
+        <textarea name="message" id="string" onclick="" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea> 
+        <br>
+        </div>
+        <br>
+        <button id="encode-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
+        <button id="decode-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
+        <div>
+        <br>
+        <textarea name="message" id="string1" cols="40" rows="5" placeholder="Resultado..." class ="text-inputs text-align"></textarea>  
+        <br>
+        <button type="button" class="button4" onclick="COPIAR()" name="button">COPIAR</button>
+        </div>
+        <br>
+        <br>
     </div>
-    <script src="cipher.js"></script>
     <script src="index.js"></script>
-  </body>
+    <script src="cipher.js"></script>
+</body>
 </html>
