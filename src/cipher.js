@@ -19,6 +19,9 @@ window.cipher = {
 			} else if (letterToAsciiNum === 32) {
 				letterToAsciiNum = String.fromCharCode(letterToAsciiNum);
 				resultOfEncode += " ";
+			} else if (letterToAsciiNum >= 33 && letterToAsciiNum <= 47){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum -33 + parseInt(offset)) % 15 + 33);
+				resultOfDecode += letterToAsciiNum;
 			}
 		}
 		//resultOfEncode = "holi"
@@ -39,11 +42,14 @@ window.cipher = {
 				resultOfDecode += letterToAsciiNum;
 				//Asimila minisculas
 			} else if (letterToAsciiNum >= 97 && letterToAsciiNum <= 122) {
-				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 111 - key) % 26 + 97);
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 85 - key) % 26 + 97);
 				resultOfDecode += letterToAsciiNum;
 				//Asimila el espacio " "
 			} else if (letterToAsciiNum === 32) {
 				resultOfDecode += " ";
+			} else if (letterToAsciiNum >= 33 && letterToAsciiNum <= 47){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 27 - key) % 15 + 33);
+				resultOfDecode += letterToAsciiNum;
 			}
 		}
 		return resultOfDecode;
