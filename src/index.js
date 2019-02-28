@@ -1,12 +1,13 @@
 document.getElementById("Pagina2").style.display = "none";
+let validarNombre=document.getElementById("button");
+validarNombre.addEventListener("click",()=>{
+let name2= document.getElementById("txt").value;
+document.getElementById("nombreUsuario").innerHTML = name2;
+});
 
-function validarNombre() {
-    const name2= document.getElementById("txt").value;
-    console.log(name2);
-    document.getElementById("nombreUsuario").innerHTML = name2;
-    document.getElementById("Pagina1").style.display = "none";
-    document.getElementById("Pagina2").style.display = "block";
-}
+document.getElementById("Pagina1").style.display = "none";
+document.getElementById("Pagina2").style.display = "block";
+
 
 
 let string;

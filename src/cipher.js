@@ -1,3 +1,4 @@
+
 //****************************FUNCION CIFRAR*******************************
 window.cipher = {
 	encode: (offset, string) => {
