@@ -21,7 +21,13 @@ window.cipher = {
 				resultOfEncode += " ";
 			} else if (letterToAsciiNum >= 33 && letterToAsciiNum <= 47){
 				letterToAsciiNum = String.fromCharCode((letterToAsciiNum -33 + parseInt(offset)) % 15 + 33);
-				resultOfDecode += letterToAsciiNum;
+				resultOfEncode += letterToAsciiNum;
+			}else if (letterToAsciiNum >= 48 && letterToAsciiNum <= 57){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum -48 + parseInt(offset)) % 10 + 48);
+				resultOfEncode += letterToAsciiNum;
+			}else if (letterToAsciiNum >= 58 && letterToAsciiNum <= 64){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum -58 + parseInt(offset)) % 7 + 58);
+				resultOfEncode += letterToAsciiNum;
 			}
 		}
 		//resultOfEncode = "holi"
@@ -49,6 +55,12 @@ window.cipher = {
 				resultOfDecode += " ";
 			} else if (letterToAsciiNum >= 33 && letterToAsciiNum <= 47){
 				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 27 - key) % 15 + 33);
+				resultOfDecode += letterToAsciiNum;
+			}else if (letterToAsciiNum >= 48 && letterToAsciiNum <= 57){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 12 - key) % 10 + 48);
+				resultOfDecode += letterToAsciiNum;
+			}else if (letterToAsciiNum >= 58 && letterToAsciiNum <= 64){
+				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 5 - key) % 7 + 58);
 				resultOfDecode += letterToAsciiNum;
 			}
 		}
