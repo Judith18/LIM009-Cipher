@@ -1,14 +1,15 @@
+
+window.onload=()=>{
 document.getElementById("Pagina2").style.display = "none";
+}
+
 let validarNombre=document.getElementById("button");
 validarNombre.addEventListener("click",()=>{
 let name2= document.getElementById("txt").value;
 document.getElementById("nombreUsuario").innerHTML = name2;
-});
-
 document.getElementById("Pagina1").style.display = "none";
 document.getElementById("Pagina2").style.display = "block";
-
-
+});
 
 let string;
 let offset;
