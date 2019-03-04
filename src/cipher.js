@@ -29,8 +29,9 @@ window.cipher = {
 			}else if (letterToAsciiNum >= 58 && letterToAsciiNum <= 64){
 				letterToAsciiNum = String.fromCharCode((letterToAsciiNum -58 + parseInt(offset)) % 7 + 58);
 				resultOfEncode += letterToAsciiNum;
-			}
+			}else{resultOfEncode+= String.fromCharCode(10);
 		}
+	}
 		//resultOfEncode = "holi"
 		return resultOfEncode;
 	},
@@ -63,8 +64,9 @@ window.cipher = {
 			}else if (letterToAsciiNum >= 58 && letterToAsciiNum <= 64){
 				letterToAsciiNum = String.fromCharCode((letterToAsciiNum + 5 - key) % 7 + 58);
 				resultOfDecode += letterToAsciiNum;
-			}
+			}else{resultOfDecode+= String.fromCharCode(10);
 		}
+	}
 		return resultOfDecode;
 	}
 };

@@ -1,17 +1,4 @@
 
-//describe('Proyecto cipher', () => {
-  //it('cipher debería ser un objeto', () => {
-    //assert.equal(typeof cipher, 'object');
-  //});
-   // describe('quiero que cipher.encode sea una funcion', () => {
-      // it('cipher.encode deberia ser una función', ()=>{
-       // assert.equal(typeof cipher.encode, 'function');
-       ///});
-       //it('cipherh')
-   // });
-//});
-
-
 describe('Proyecto cipher', () => {
 
   it('cipher debería ser un objeto', () => {
@@ -43,6 +30,9 @@ describe('Proyecto cipher', () => {
     it('debería retornar "?" para ":" con offset 33',() =>{
         assert.equal(cipher.encode(33, ":"),"?"
       )});
+    it('debería retornar "enter" para "enter" con offset 15',()=>{
+      assert.equal(cipher.encode(15,"\n"),"\n"
+      )});
     });
 
 
@@ -71,5 +61,9 @@ describe('Proyecto cipher', () => {
     it('debería retornar "?" para ":" con offset 16',() =>{
         assert.equal(cipher.decode(16,":"),"?"
       )});
+    it('debería retornar "enter" para "enter" con offset 15',()=>{
+        assert.equal(cipher.decode(15,"\n"),"\n"
+        )});
 })
 });
+
