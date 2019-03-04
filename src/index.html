@@ -6,48 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Criptolove</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Luckiest+Guy" rel="stylesheet">
 </head>
 <body>
     <div id="Pagina1">
         <div class="Bloque1">
-         <h1>Bienvenidos a "Criptolove"</h1>
+        <marquee> Bienvenidos a "Criptolove"</marquee>
         </div>
-        <p>Ahora será más seguro y divertido demostrar tu amor con la persona que más ames.</p><br><br><br><br><br><br> <br>
-        <form class="myForm" action="index.html" method="post" id="firtsName">
-        <h2>¿Cuál es tu nombre?</h2>
+        <div class="Información">
+        <p>Ahora será más seguro y divertido demostrar tu amor con la persona que más ames.</p> 
+        </div>
+        <img class= "pareja" src="Imagenes/pareja3.gif" alt="">
+        <h2> <img class="cartaAmor"src="Imagenes/CARTA DE AMOR6.gif" alt="">
+            <img class= "cartaAmor1" src="Imagenes/CARTA DE AMOR7.gif" alt="">¿Cuál es tu nombre?</h2>
         <input type="text" class="input1" name="validarNombre" value="" id="txt">
         </form>
         <br>
-        <div class="botonReady">
         <br>
+        <div class="botonReady">
         <button type="button" class="button1" id="button" name="button">START</button>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+        <br><br><br>
         </div>
         </div>
     <div id="Pagina2">
         <div id="introName" class="title">
-        <br>
         <h1>Hola <span id="nombreUsuario"></span> es hora de escribir tu mensaje :</h1>
         </div>
+        <div class="Clave">
+        <p>Tu clave secreta:  <input id ="offset" type="number" min="0"  max="25" value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align"></p>   
+        </div>
         <div>
-        <p>Valor de N:  <input id ="offset" type="number" min=""  value="" placeholder="Tu número clave aquí..." class ="text-inputs text-align"></p>   
-        <div>
-        <textarea name="message" id="string" onclick="" cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea> 
-        <br>
+        <textarea name="message" id="string"  cols="40" rows="5" placeholder="Escribe tu mensaje aquí..." class ="text-inputs text-align"></textarea> 
         </div>
         <br>
         <button id="encode-button" type="button" name="Cifrar" class="w3-button w3-deep-orange">CIFRAR</button>
         <button id="decode-button"  type="button" name="descifrar" class="w3-button w3-orange">DESCIFRAR</button>
-        <div>
         <br>
+        <br>
+        <div>
         <textarea name="message" id="string1" cols="40" rows="5" placeholder="Resultado..." class ="text-inputs text-align"></textarea>  
         <br>
-        <button type="button" class="button4" onclick="COPIAR()" name="button">COPIAR</button>
+        <button id="clear" type="reset" class="button4"  name="button">LIMPIAR </button>
+        <button id="copy" type="button" class="button5"  name="button">COPIAR</button>
         </div>
         <br>
         <br>
     </div>
-</div>
     <script src="index.js"></script>
     <script src="cipher.js"></script>
 </body>

@@ -11,6 +11,22 @@ document.getElementById("Pagina1").style.display = "none";
 document.getElementById("Pagina2").style.display = "block";
 });
 
+let string1= document.getElementById("string1")
+let copy=document.getElementById("copy")
+copy.addEventListener("click",()=>{
+string1.select();
+document.execCommand("copy");
+});
+
+
+let clear=document.getElementById("clear");
+clear.addEventListener("click",()=>{
+    document.getElementById("string").value="";
+    document.getElementById("string1").value="";
+    document.getElementById("offset").value="";
+ 
+});
+
 let string;
 let offset;
 let cifrarButton = document.getElementById('encode-button');
